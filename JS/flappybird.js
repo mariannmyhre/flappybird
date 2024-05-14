@@ -167,7 +167,7 @@ function moveBird(e) {
     }
 }
 function backtoStart(){
-    window.location.href = 'Gameover.html';
+    window.location.href = '../HTML/gameover.html';
 }
 
 function detectCollision(a, b) {
