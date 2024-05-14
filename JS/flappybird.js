@@ -1,6 +1,6 @@
 // FLAPPY BIRD -- THE GAME
 //board
-let board
+let board = document.getElementById('board')
 let boardWidth = 360;  
 let boardHeight = 640;  // the background-image has exactly these dimensions
 let context
@@ -67,6 +67,7 @@ window.onload = function(){
     setInterval(placePipes, 1500) //every 1.5 seconds
 }
 document.addEventListener('keydown', moveBird)
+
 
 function update() {
     requestAnimationFrame(update)
@@ -160,9 +161,7 @@ function placePipes() {
     pipeArray.push(bottomPipe)
 }
 
-board.addEventListener('click',() => {
-    velocityY = -6
-})
+
 
 function moveBird(e) {
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
@@ -170,6 +169,11 @@ function moveBird(e) {
         velocityY = -6
     }
 }
+
+document.addEventListener('click', () => {
+    velocityY = -6
+})
+
 function backtoStart(){
     window.location.href = '../HTML/gameover.html';
 }
@@ -184,3 +188,4 @@ window.addEventListener('keydown', function(e){
         e.preventDefault();
       }
 })
+

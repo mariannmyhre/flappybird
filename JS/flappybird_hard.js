@@ -169,17 +169,13 @@ function moveBird(e) {
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
         //jump
         velocityY = -6
-
-        //reset game: reset the properties to their default values
-        /* if (gameOver) {
-            bird.y = birdY
-            pipeArray = []
-            score = 0
-            gameOver = false
-            //backtoStart()
-        } */
     }
 }
+
+document.addEventListener('click', () => {
+    velocityY = -6
+})
+
 function backtoStart(){
     window.location.href = '../HTML/gameover.html';
 }
