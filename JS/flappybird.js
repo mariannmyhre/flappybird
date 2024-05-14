@@ -160,6 +160,10 @@ function placePipes() {
     pipeArray.push(bottomPipe)
 }
 
+board.addEventListener('click',() => {
+    velocityY = -6
+})
+
 function moveBird(e) {
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
         //jump
